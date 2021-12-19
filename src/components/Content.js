@@ -1,45 +1,35 @@
-import { useState } from 'react'
-
-import { Route, Routes, Navigate } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Route, Routes } from "react-router-dom";
 import "../App.css";
+import CardList from './CardList';
+import React from 'react'
+import Card from "./Card";
+
 
 
 export default function Content() {
 
-          const [isUserAuth, setIsUserAuth] = useState(false);
-          const AuthButton = <Button onClick={() => setIsUserAuth(!isUserAuth)}>Auth me</Button>
-
-
           return (
                     <React.Fragment>
-                              <Header></Header>
-                              <div className="MainContent"></div>
-                              <Switch>
-                                        {isUserAuth ? (
+                              <div className="MainContent">
+                                        <Routes>
+
+                                                  <Route path="/(characters|locations|episodes)/"  //problem here!//
+                                                            element={<CardList />} />
                                                   <Route
-                                                            exact
-                                                            path="/(characters|locations|episodes)/"
-                                                            render={(props) => <CardList {...props} />}
+                                                            path="/(character|location|episode)/:resourceId"
+                                                            element={(props) => <Card {...props} />}
+                                                  ></Route>
+                                                  <Route
+                                                            path="/(about|who|contact)/"
+                                                            element={() => <h1>This is our About page!</h1>}
                                                   />
-                                        ) : <Button onClick={() => setIsUserAuth(!isUserAuth)}>Auth me</Button>}
 
-                                        <Route
-                                                  path="/(character|location|episode)/:resourceId"
-                                                  render={(props) => <Card {...props} />}
-                                        ></Route>
-                                        <Route
-                                                  path="/(about|who|contact)/"
-                                                  render={() => <h1>This is our About page!</h1>}
-                                        />
-
-                                        <Route
-                                                  path="/home"
-                                                  render={() => <h1>Welcome to our App</h1>}
-                                        />
-                                        <Redirect from="/" to="/home" />
-                                        <Route render={() => <h1>Page not found</h1>} />
-                              </Switch>
+                                                  <Route
+                                                            path="/home"
+                                                            element={() => <h1>Welcome to our App</h1>}
+                                                  />
+                                                  <Route element={() => <h1>Page not found</h1>} />
+                                        </Routes></div>
                     </React.Fragment>
           );
 };
