@@ -1,4 +1,5 @@
-.App {
+.App,
+.Header {
   background-color: #eee;
   display: flex;
   flex-direction: column;
@@ -9,28 +10,27 @@
 
 /*header*/
 
-.Header ul li{
+.Header ul li {
   display: inline-block;
   text-decoration: none;
 }
-.Header ul li a{
+.Header ul li a {
   text-decoration: none;
-  color: gray
+  color: gray;
 }
-
 
 .active {
   background-color: red;
-  text-decoration: underline!important;
+  text-decoration: underline !important;
 }
 
 .my-custom-active-classsss {
-  color: green!important;
-  text-decoration: line-through!important;
+  color: green !important;
+  text-decoration: line-through !important;
 }
 
 /*cardlist*/
-.CardListContainer{
+.CardListContainer {
   display: flex;
   /* width: 90%;*/
   padding: 10px;

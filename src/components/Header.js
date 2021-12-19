@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../App.css";
 
 export default function Header() {
@@ -9,24 +9,24 @@ export default function Header() {
                               <ul>
                                         <li>
                                                   <Button className="NavButton">
-                                                            <Link to="/">🏠</Link>
+                                                            <NavLink to="/">🏠</NavLink>
                                                   </Button>
                                         </li>
                                         <li>
                                                   <Button className="NavButton">
-                                                            <Link to="/characters" activeclassname="my-custom-active-classsss">
+                                                            <NavLink to="/characters" activeclassname="my-custom-active-classsss">
                                                                       Characters
-                                                  </Link>
+                                                  </NavLink>
                                                   </Button>
                                         </li>
                                         <li>
                                                   <Button className="NavButton">
-                                                            <Link to="/locations">Locations</Link>
+                                                            <NavLink to="/locations">Locations</NavLink>
                                                   </Button>
                                         </li>
                                         <li>
                                                   <Button className="NavButton">
-                                                            <Link to="/episodes" activestyle={{ color: 'blue' }}>Episodes</Link>
+                                                            <NavLink to="/episodes" activestyle={{ color: 'blue' }}>Episodes</NavLink>
                                                   </Button>
                                         </li>
                               </ul>
