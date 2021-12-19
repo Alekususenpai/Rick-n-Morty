@@ -4,15 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from "axios";
-import { BrowserRouter } from "react-router-dom";
 
 axios.defaults.baseURL = "https://rickandmortyapi.com/api";
 
-ReactDOM.render(
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>,
-	document.getElementById("root")
+ReactDOM.render(<App />, document.getElementById("root")
 );
 reportWebVitals();
 

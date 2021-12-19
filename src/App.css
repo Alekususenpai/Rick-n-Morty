@@ -9,11 +9,11 @@
 
 /*header*/
 
-.NavList ul li{
+.Header ul li{
   display: inline-block;
   text-decoration: none;
 }
-.NavList ul li a{
+.Header ul li a{
   text-decoration: none;
   color: gray
 }
