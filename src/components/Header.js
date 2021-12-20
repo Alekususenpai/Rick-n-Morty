@@ -5,7 +5,7 @@ import "../App.css";
 export default function Header() {
           return (
                     <header className="Header">
-                              <h2>Rick and Morty API</h2>
+                              <h1>Rick and Morty API</h1>
                               <ul>
                                         <li>
                                                   <Button className="NavButton">

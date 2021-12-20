@@ -1,11 +1,23 @@
-.App,
+* {
+  box-sizing: border-box;
+}
+
 .Header {
-  background-color: #eee;
+  background-image: url("../src/6799031.jpg");
+  background-position: center top;
+  background-size: cover;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: "Irish Grover";
+}
+
+.Header h1 {
+  font-size: 3.4rem;
+  text-transform: uppercase;
 }
 
 /*header*/
@@ -14,14 +26,19 @@
   display: inline-block;
   text-decoration: none;
 }
+
 .Header ul li a {
+  font-size: 1.2rem;
   text-decoration: none;
-  color: gray;
+  color: darkred;
+  font-family: "Irish Grover", cursive;
+  padding: 0.3em 0.6em;
+  border-radius: 1em;
 }
 
 .active {
-  background-color: red;
-  text-decoration: underline !important;
+  background-color: black;
+  color: gray;
 }
 
 .my-custom-active-classsss {
@@ -30,9 +47,41 @@
 }
 
 /*cardlist*/
-.CardListContainer {
+.container {
+  background: rgb(36, 40, 47);
   display: flex;
-  /* width: 90%;*/
-  padding: 10px;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  border: solid 5px red;
+  padding: 2.2rem 0;
+}
+
+.card {
+  background: rgb(60, 62, 68);
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px,
+    rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+  display: flex;
+  width: 40%;
+  height: 240px;
+  align-items: center;
+  border: solid 5px red;
+  border-radius: 1em;
+  color: beige;
+  margin-bottom: 2.2rem;
+}
+
+.img {
+  width: 40%;
+  border: solid 5px red;
+}
+
+.img img {
+  width: 100%;
+}
+
+.info {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border: solid 5px red;
 }

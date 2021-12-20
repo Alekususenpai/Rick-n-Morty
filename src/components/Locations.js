@@ -20,19 +20,21 @@ export default function Locations() {
 
           return (
 
-                    <>
+                    <section className="container">
                               {locations.map(location => {
-                                        return <div key={location.id}>
+                                        return <div className="card" key={location.id}>
 
-                                                  <h1>{location.name}</h1>
-                                                  <h2>{location.type}</h2>
-                                                  <h2>{location.dimension}</h2>
+                                                  <div class="info">
+                                                            <h1>{location.name}</h1>
+                                                            <p>{location.type}</p>
+                                                            <p>{location.dimension}</p>
+                                                  </div>
 
                                         </div>
 
                               })}
 
-                    </>
+                    </section>
 
           )
 }

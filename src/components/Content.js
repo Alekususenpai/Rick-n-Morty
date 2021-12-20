@@ -10,7 +10,7 @@ import Episodes from "./Episodes";
 export default function Content() {
 
           return (
-                    <div className="MainContent">
+                    <div>
                               <Routes>
                                         <Route path="/" element={<h2>Hi, this is home</h2>} />
                                         <Route path="/characters" element={<Characters />} />

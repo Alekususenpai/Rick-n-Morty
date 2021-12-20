@@ -20,19 +20,24 @@ export default function Characters() {
 
           return (
 
-                    <>
+                    <section className="container">
                               {characters.map(ch => {
-                                        return <div key={ch.id}>
-                                                  <img src={ch.image} alt="img"></img>
-                                                  <h1>{ch.name}</h1>
-                                                  <h2>Status: {ch.status}</h2>
-                                                  <h2>Species: {ch.species}</h2>
-                                                  <h2>Location: {ch.location.name}</h2>
+                                        return <div className="card" key={ch.id}>
+                                                  <div className="img">
+                                                            <img src={ch.image} alt="img"></img>
+                                                  </div>
+
+                                                  <div className="info">
+                                                            <h1>{ch.name}</h1>
+                                                            <p>Status: {ch.status}</p>
+                                                            <p>Species: {ch.species}</p>
+                                                            <p>Location: {ch.location.name}</p>
+                                                  </div>
                                         </div>
 
                               })}
 
-                    </>
+                    </section>
 
           )
 }

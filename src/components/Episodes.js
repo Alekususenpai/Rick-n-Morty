@@ -20,18 +20,20 @@ export default function Episodes() {
 
           return (
 
-                    <>
+                    <section className="container">
                               {episodes.map(episode => {
-                                        return <div key={episode.id}>
+                                        return <div className="card" key={episode.id}>
 
-                                                  <h1 >{episode.name}</h1>
-                                                  <h2>{episode.air_date}</h2>
-                                                  <h2>{episode.episode}</h2>
+                                                  <div class="info">
+                                                            <h1 >{episode.name}</h1>
+                                                            <p>{episode.air_date}</p>
+                                                            <p>{episode.episode}</p>
+                                                  </div>
                                         </div>
 
                               })}
 
-                    </>
+                    </section>
 
           )
 }
