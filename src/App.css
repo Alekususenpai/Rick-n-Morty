@@ -3,13 +3,32 @@
   cursor: pointer;
 }
 
-.Homepage{
+body {
+  background: rgb(36, 40, 47);
+}
+
+.Homepage {
   font-family: "Irish Grover";
   display: flex;
+  justify-content: space-evenly;
+  padding: 3rem;
+  align-items: center;
+}
+
+.Homepage h1 {
+  width: 30%;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: thistle;
+}
+
+.Homepage img {
+  width: 30%;
 }
 
 .Header {
-  background-image: url("../src/6799031.jpg");
+  background-image: url("./6799031.jpg");
   background-position: center top;
   background-size: cover;
   height: 65vh;
@@ -79,15 +98,13 @@
   border-radius: 1em 0 0 1em;
 }
 
-
 .info {
   margin-left: 0.8rem;
   font-size: 1.2rem;
   width: 50%;
-
 }
 
-.info span{
+.info span {
   font-style: italic;
   font-size: 1.1rem;
 }

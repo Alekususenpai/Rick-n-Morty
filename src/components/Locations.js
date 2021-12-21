@@ -25,9 +25,9 @@ export default function Locations() {
                                         return <div className="card" key={location.id}>
 
                                                   <div class="info">
-                                                            <h1>{location.name}</h1>
-                                                            <p>{location.type}</p>
-                                                            <p>{location.dimension}</p>
+                                                            <h3>Name: <span>{location.name}</span></h3>
+                                                            <h3>Type: <span>{location.type}</span></h3>
+                                                            <h3>Dimension: <span>{location.dimension}</span></h3>
                                                   </div>
 
                                         </div>

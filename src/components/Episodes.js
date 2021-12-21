@@ -25,9 +25,9 @@ export default function Episodes() {
                                         return <div className="card" key={episode.id}>
 
                                                   <div class="info">
-                                                            <h1 >{episode.name}</h1>
-                                                            <p>{episode.air_date}</p>
-                                                            <p>{episode.episode}</p>
+                                                            <h3>Name: <span>{episode.name}</span></h3>
+                                                            <h3>Air date: <span>{episode.air_date}</span></h3>
+                                                            <h3><span>{episode.episode}</span></h3>
                                                   </div>
                                         </div>
 
