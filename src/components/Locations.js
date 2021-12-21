@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from "axios";
+import logo from "./logo.png";
 
 export default function Locations() {
 
@@ -23,9 +24,9 @@ export default function Locations() {
                     <section className="container">
                               {locations.map(location => {
                                         return <div className="card" key={location.id}>
-
+                                                  <div className="logo" style={{ backgroundImage: `url(${logo})`}}></div>
                                                   <div class="info">
-                                                            <h3>Name: <span>{location.name}</span></h3>
+                                                            <h3>Location name: <span>{location.name}</span></h3>
                                                             <h3>Type: <span>{location.type}</span></h3>
                                                             <h3>Dimension: <span>{location.dimension}</span></h3>
                                                   </div>

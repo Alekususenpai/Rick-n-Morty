@@ -108,3 +108,13 @@ body {
   font-style: italic;
   font-size: 1.1rem;
 }
+
+.logo {
+  width: 30%;
+  height: 60%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  margin: 0 1.5rem;;
+}
