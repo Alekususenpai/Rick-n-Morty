@@ -23,15 +23,14 @@ export default function Characters() {
                     <section className="container">
                               {characters.map(ch => {
                                         return <div className="card" key={ch.id}>
-                                                  <div className="img">
-                                                            <img src={ch.image} alt="img"></img>
+                                                  <div className="img" style={{ backgroundImage: `url("${ch.image}")` }}>
                                                   </div>
 
                                                   <div className="info">
                                                             <h1>{ch.name}</h1>
-                                                            <p>Status: {ch.status}</p>
-                                                            <p>Species: {ch.species}</p>
-                                                            <p>Location: {ch.location.name}</p>
+                                                            <p>Status: <span>{ch.status}</span></p>
+                                                            <p>Species: <span>{ch.species}</span></p>
+                                                            <p>Location: <span>{ch.location.name}</span></p>
                                                   </div>
                                         </div>
 
